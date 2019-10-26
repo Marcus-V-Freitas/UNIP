@@ -1,0 +1,53 @@
+﻿@model UnipDLL.BLL.Contato
+<section id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4><strong>Fale Conosco:</strong></h4>
+                <form asp-action="Contato" asp-controller="Home" asp-area="" method="post">
+                    <div class="row">
+                        <div class="col-lg-4 field">
+                            <div class="form-group">
+                                <label asp-for="Nome"></label>
+                                <input asp-for="Nome" class="form-control" placeholder="Seu nome" />
+                                <span asp-validation-for="Nome" class="text-danger"></span>
+                            </div>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-lg-4 field">
+                            <div class="form-group">
+                                <label asp-for="Email"></label>
+                                <input asp-for="Email" class="form-control" placeholder="Seu email" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-lg-4 field">
+                            <div class="form-group">
+                                <label asp-for="Assunto"></label>
+                                <input asp-for="Assunto" class="form-control" placeholder="Seu assunto" />
+                                <span asp-validation-for="Assunto" class="text-danger"></span>
+                            </div>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label asp-for="Texto"></label>
+                                <div class="form-inline">
+                                    <textarea asp-for="Texto" class="form-control" style="width:100%"> </textarea>
+                                    <span asp-validation-for="Texto" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        <button class="btn btn-theme margintop10 pull-left" type="submit">Enviar Mensagem</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,24 @@
+﻿@model UnipDLL.BLL.Curso
+@{
+    ViewData["Title"] = "Atualizar";
+}
+
+<br />
+<br />
+<br />
+<br />
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Nome"></label>
+        <input asp-for="Nome" class="form-control" placeholder="Digite o nome do curso">
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Endereco"></label>
+        <input asp-for="Endereco" class="form-control" placeholder="Digite o endereço">
+        <span asp-validation-for="Endereco" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button> <a asp-action="Index" class="btn btn-info">Voltar</a>
+</form>

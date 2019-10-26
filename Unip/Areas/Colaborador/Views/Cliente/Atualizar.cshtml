@@ -1,0 +1,80 @@
+﻿@model UnipDLL.BLL.Cliente
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <form method="post">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="Situacao" />
+
+        <div class="form-group">
+            <label asp-for="Nome"></label>
+            <input asp-for="Nome" class="form-control" placeholder="Digite o nome do cliente">
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Nascimento"></label>
+            <input type="text" asp-for="Nascimento" class="form-control data" placeholder="Digite o Email do cliente">
+            <span asp-validation-for="Nascimento" class="text-danger"></span>
+        </div> <!-- form-group end.// -->
+        <div class="form-group">
+            <label asp-for="Sexo"></label>
+        </div>
+        <div class="form-group">
+            <label class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" asp-for="Sexo" value="M">
+                <span class="form-check-label"> Masculino </span>
+            </label>
+            <label class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" asp-for="Sexo" value="F">
+                <span class="form-check-label"> Feminino</span>
+            </label>
+            <br />
+            <span asp-validation-for="Sexo" class="text-danger"></span>
+        </div> <!-- form-group end.// -->
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" asp-for="Email" class="form-control" placeholder="Digite o Email do cliente">
+            <span asp-validation-for="Email" class="text-danger"></span>
+            <small class="form-text text-muted">
+                Nós nunca compartilharemos seu e-mail para terceiros.
+            </small>
+        </div> <!-- form-group end.// -->
+
+        <div class="form-group">
+            <label asp-for="CursoId"></label>
+            <select asp-for="CursoId" class="form-control" asp-items="@ViewBag.Cursos">
+                <option value="">Selecione</option>
+            </select>
+            <span asp-validation-for="CursoId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PeriodoId"></label>
+            <select asp-for="PeriodoId" class="form-control" asp-items="@ViewBag.Periodos">
+                <option value="">Selecione</option>
+            </select>
+            <span asp-validation-for="PeriodoId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="AnoDesejadoCurso"></label>
+            <input type="text" asp-for="AnoDesejadoCurso" class="form-control" placeholder="Digite o Ano desejado" />
+            <span asp-validation-for="AnoDesejadoCurso" class="text-danger"></span>
+        </div>
+
+        <div class="form-row">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Telefone</label>
+                    <input type="text" asp-for="Telefone" class="form-control telefone" placeholder="Digite o telefone">
+                    <span asp-validation-for="Telefone" class="text-danger"></span>
+                </div> <!-- form-group end.// -->
+                <!-- form-group end.// -->
+            </div> <!-- form-row.// -->
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Salvar</button> <a asp-action="Index" class="btn btn-info">Voltar</a>
+    </form>

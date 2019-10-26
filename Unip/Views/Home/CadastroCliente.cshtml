@@ -1,0 +1,102 @@
+﻿@model UnipDLL.BLL.Cliente
+
+<form method="post" asp-action="CadastroCliente" asp-controller="Home" asp-area="">
+    <main role="main">
+
+        <section class="container" style="margin-top: 50px">
+            <div class="row">
+                <aside class="col-sm-6">
+                    <h3 class="subtitle-doc">
+                        Cadastro do Aluno
+                        <a href="#" data-html="code_register_1" class="showcode"></a>
+                    </h3>
+                    <div id="code_register_1">
+                        <div class="card">
+                            <article class="card-body">
+                                @if (TempData["MSG_S"] != null)
+                                {
+                                    <p class="alert alert-success">@TempData["MSG_S"]</p>
+                                }
+                                <div class="form-row">
+                                    <div class="col form-group">
+                                        <label>Nome:</label>
+                                        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome ">
+                                        <span asp-validation-for="Nome" class="text-danger"></span>
+                                    </div> <!-- form-group end.// -->
+                                    <div class="col form-group">
+                                        <label asp-for="Nascimento"></label>
+                                        <input type="text" asp-for="Nascimento" class="form-control data" placeholder="Digite a idade">
+                                        <span asp-validation-for="Nascimento" class="text-danger"></span>
+                                    </div> <!-- form-group end.// -->
+                                </div> <!-- form-row end.// -->
+                                <div class="form-group">
+                                    <label asp-for="Sexo"></label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" asp-for="Sexo" value="M">
+                                        <span class="form-check-label"> Masculino </span>
+                                    </label>
+                                    <label class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" asp-for="Sexo" value="F">
+                                        <span class="form-check-label"> Feminino</span>
+                                    </label>
+                                    <br />
+                                    <span asp-validation-for="Sexo" class="text-danger"></span>
+                                </div> <!-- form-group end.// -->
+
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="text" asp-for="Email" class="form-control" placeholder="Digite o email">
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                    <small class="form-text text-muted">
+                                        Nós nunca compartilharemos seu e-mail para terceiros.
+                                    </small>
+                                </div> <!-- form-group end.// -->
+
+                                <div class="form-group">
+                                    <label asp-for="CursoId"></label>
+                                    <select asp-for="CursoId" class="form-control" asp-items="@ViewBag.Cursos">
+                                        <option value="">Selecione</option>
+                                    </select>
+                                    <span asp-validation-for="CursoId" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="PeriodoId"></label>
+                                    <select asp-for="PeriodoId" class="form-control" asp-items="@ViewBag.Periodos">
+                                        <option value="">Selecione</option>
+                                    </select>
+                                    <span asp-validation-for="PeriodoId" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="AnoDesejadoCurso"></label>
+                                    <input type="text" asp-for="AnoDesejadoCurso" class="form-control" placeholder="Digite o Ano desejado" />
+                                    <span asp-validation-for="AnoDesejadoCurso" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Telefone</label>
+                                        <input type="text" asp-for="Telefone" class="form-control telefone" placeholder="Digite o telefone">
+                                        <span asp-validation-for="Telefone" class="text-danger"></span>
+                                    </div> <!-- form-group end.// -->
+                                    <!-- form-group end.// -->
+                                </div> <!-- form-row.// -->
+
+
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-block"> Cadastrar </button>
+                                </div> <!-- form-group// -->
+
+                            </article> <!-- card-body end .// -->
+                            
+                        </div> <!-- card.// -->
+
+                    </div> <!-- code-wrap.// -->
+                </aside>
+            </div>
+        </section>
+    </main>
+</form>

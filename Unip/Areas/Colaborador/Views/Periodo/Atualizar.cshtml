@@ -1,0 +1,22 @@
+﻿@model UnipDLL.BLL.Periodo
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <form method="post">
+        <input type="hidden" asp-for="Id" />
+   
+
+        <div class="form-group">
+            <label asp-for="Horario"></label>
+            <input asp-for="Horario" class="form-control" placeholder="Digite o horario">
+            <span asp-validation-for="Horario" class="text-danger"></span>
+        </div>
+       
+
+
+        <button type="submit" class="btn btn-primary">Salvar</button> <a asp-action="Index" class="btn btn-info">Voltar</a>
+    </form>

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dia do Campus</title>
+    <!-- Bootstrap -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/css/font-awesome.css" />
+    <link rel="stylesheet" href="~/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/css/isotope.css" media="screen" />
+    <link href="~/resources/XPagedlist/PageList.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/css/style.css">
+    <link href="~/css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/animate.css" />
+
+    <!-- =======================================================
+      Theme Name: Hidayah
+      Theme URL: https://bootstrapmade.com/hidayah-free-simple-html-template-for-corporate/
+      Author: BootstrapMade
+      Author URL: https://bootstrapmade.com
+    ======================================================= -->
+</head>
+
+<body>
+    <header>
+        <div class="main-menu" style="background-color:darkslateblue">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h1>
+                            <a class="navbar-brand" asp-action="Index" asp-controller="Home" data-0="line-height:90px;" data-300="line-height:50px;">
+                                <img src="~/resources/img/Unip.png" style="margin-top: -20px; width:200px; height:60px">
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="dropdown">
+                            <ul class="nav nav-pills">
+                                <li><a asp-action="Index" asp-controller="Home" asp-area="">Home</a></li>
+                                <li><a asp-action="Cursos" asp-controller="Home" asp-area="">Cursos Disponíveis</a></li>
+                                <li><a asp-action="Login" asp-controller="Home" asp-area="Colaborador">Login Colaborador</a></li>
+                                <li><a asp-action="Contato" asp-controller="Home" asp-area="">Contato</a></li>
+
+                                <li><a asp-action="CadastroCliente" asp-controller="Home" asp-area="">Cadastro</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    @RenderBody()
+    <footer>
+        <section id="footer" class="section footer" style="background-color:darkslateblue">
+            <div class="container">
+                <div class="row animated opacity mar-bot20" data-andown="fadeIn" data-animation="animation">
+                </div>
+                <div class="row align-center copyright">
+                    <div class="col-sm-12 text-center">
+                        <p> <font color="#FFFFFF">Copyright &copy;@DateTime.Now.ToString("dd/MM/yyyy") - Unip</font></p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a href="#" class="scrollup"><i class="fa fa-chevron-up"> </i></a>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.isotope.min.js"></script>
+    <script src="~/js/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="~/js/wow.min.js"></script>
+    <script src="~/js/functions.js"></script>
+    <script type="text/javascript">
+        new WOW().init();
+    </script>
+    <script src="~/resources/contactform/contactform.js"></script>
+    <script src="~/js/ActionsVisitante.js"></script>
+    <script src="~/resources/mask/jquery.mask.min.js"></script>
+</body>
+
+</html>
